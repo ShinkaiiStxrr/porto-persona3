@@ -160,60 +160,60 @@ const slinkData = [
 ];
 
 const skillTabsList = [
-  { id: "frontend", code: "01", label: "FRONTEND" },
-  { id: "backend", code: "02", label: "BACKEND" },
-  { id: "ai", code: "03", label: "AI & ML" },
-  { id: "languages", code: "04", label: "LANGUAGES" }
+  { id: "frontend", code: "01", label: "belum tau" },
+  { id: "backend", code: "02", label: "belum tau" },
+  { id: "ai", code: "03", label: "belum tau" },
+  { id: "languages", code: "04", label: "belum tau" }
 ];
 
 const skillGroupsData = [
   {
     id: "frontend",
-    title: "FRONTEND & WEB ENGINEERING",
+    title: "belum tau",
     code: "01",
     skills: [
-      { name: "JavaScript / TypeScript", level: 92 },
-      { name: "React · Next.js · Vue 3", level: 88 },
-      { name: "HTML5 · Modern CSS3 · Tailwind", level: 95 },
-      { name: "SvelteKit · State Management", level: 84 },
-      { name: "WebGL · Three.js · Canvas", level: 80 },
-      { name: "UI/UX Design · Figma Systems", level: 86 }
+      { name: "belum tau", level: 92 },
+      { name: "belum tau", level: 88 },
+      { name: "belum tau", level: 95 },
+      { name: "belum tau", level: 84 },
+      { name: "belum taus", level: 80 },
+      { name: "belum tau", level: 86 }
     ]
   },
   {
     id: "backend",
-    title: "BACKEND & CLOUD ARCHITECTURE",
+    title: "belum tau",
     code: "02",
     skills: [
-      { name: "Node.js · Express · REST APIs", level: 85 },
-      { name: "Python · FastAPI · Django", level: 82 },
-      { name: "SQL · PostgreSQL · Supabase", level: 80 },
-      { name: "Docker · CI/CD · Cloud Hosting", level: 76 },
-      { name: "Git · GitHub · Workflows", level: 90 },
-      { name: "WebSockets & Realtime Systems", level: 78 }
+      { name: "belum tau", level: 85 },
+      { name: "belum tau", level: 82 },
+      { name: "belum tau", level: 80 },
+      { name: "belum tau", level: 76 },
+      { name: "belum tau", level: 90 },
+      { name: "belum tau", level: 78 }
     ]
   },
   {
     id: "ai",
-    title: "AI & MACHINE LEARNING",
+    title: "belum tau",
     code: "03",
     skills: [
-      { name: "Prompt Engineering & Agent Swarms", level: 90 },
-      { name: "TensorFlow / PyTorch · Neural Nets", level: 82 },
-      { name: "NLP & LLM API Integrations", level: 85 },
-      { name: "Computer Vision · MediaPipe", level: 80 },
-      { name: "Vector DB & RAG Architecture", level: 84 }
+      { name: "belum tau", level: 90 },
+      { name: "belum tau", level: 82 },
+      { name: "belum tau", level: 85 },
+      { name: "belum tau", level: 80 },
+      { name: "belum tau", level: 84 }
     ]
   },
   {
     id: "languages",
-    title: "LANGUAGE PROFICIENCY",
+    title: "belum tau",
     code: "04",
     skills: [
-      { name: "Bahasa Indonesia (Native / Fluent)", level: 100 },
-      { name: "English (Professional Working Proficiency)", level: 86 },
-      { name: "English (Technical & Documentation)", level: 90 },
-      { name: "English (Spoken & Conversational)", level: 82 }
+      { name: "belum tau", level: 100 },
+      { name: "belum tau", level: 86 },
+      { name: "belum tau", level: 90 },
+      { name: "belum tau", level: 82 }
     ]
   }
 ];
