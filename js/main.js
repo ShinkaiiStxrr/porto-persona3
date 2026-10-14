@@ -25,20 +25,20 @@ const options = [
     summary: "Featured applications, interactive web systems & creative experiments",
     cards: [
       {
-        title: "Persona 3 Reload Pause Menu",
-        desc: "Pixel-perfect vanilla recreation with SVG color-inversion, Web Audio SFX, and video backdrops."
+        title: "belum tau",
+        desc: "belum tau."
       },
       {
-        title: "Persona 5 Style Portfolio",
-        desc: "Signature comic-book high-contrast red & black interactive developer showcase."
+        title: "belum tau.",
+        desc: "belum tau."
       },
       {
-        title: "Persona 5 Typography Playground",
-        desc: "Custom typeface exploration tool for Ransom and Solid font systems."
+        title: "belum tau",
+        desc: "belum tau"
       },
       {
-        title: "Modern Web App Suite",
-        desc: "High-performance responsive web applications crafted with clean code architecture."
+        title: "belum tau",
+        desc: "belum tau."
       }
     ]
   },
