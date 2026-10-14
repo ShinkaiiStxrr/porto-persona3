@@ -125,35 +125,36 @@ const options = [
   }
 ];
 
+
 const slinkData = [
   {
     numeral: "I",
-    title: "P3R PORTFOLIO",
-    subtitle: "Persona 3 Reload UI & Web Audio Engine",
+    title: "belum tau",
+    subtitle: "belum tau",
     url: "#"
   },
   {
     numeral: "II",
-    title: "PERSONA 5 PORTO",
-    subtitle: "Phantom Thieves Comic Showcase",
+    title: "belum tau",
+    subtitle: "belum tau",
     url: "../porto-persona/index.html"
   },
   {
     numeral: "III",
-    title: "P5 FONT GENERATOR",
-    subtitle: "Ransom Cutout Typography Tool",
+    title: "belum tau",
+    subtitle: "belum tau",
     url: "../persona5-font/index.html"
   },
   {
     numeral: "IV",
-    title: "AIOS UTBK PLATFORM",
-    subtitle: "Neumorphic SNBT Exam Simulator",
+    title: "belum tau",
+    subtitle: "belum tau",
     url: "../aios-app/index.html"
   },
   {
     numeral: "V",
-    title: "CREATIX AGENCY",
-    subtitle: "High-Performance Modern Web Platform",
+    title: "belum tau",
+    subtitle: "belum tau",
     url: "../web-app/index.html"
   }
 ];
