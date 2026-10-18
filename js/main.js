@@ -123,6 +123,23 @@ const options = [
       }
     ]
   }
+,
+  {
+    name: "VIDEO",
+    description: "Watch Videos & Creative Works",
+    rotation: 12,
+    zIndex: 5,
+    offsetX: -90,
+    offsetY: 45,
+    fontSize: "4.9rem",
+    bannerScaleX: 1.02,
+    bannerScaleY: 3.2,
+    tag: "VIDEO ARCHIVE",
+    summary: "Video projects, demos, and creative works",
+    cards: [
+      { title: "Video Gallery", desc: "Watch video projects and creative works." }
+    ]
+  }
 ];
 
 
@@ -156,6 +173,31 @@ const slinkData = [
     title: "belum tau",
     subtitle: "belum tau",
     url: "../web-app/index.html"
+  }
+];
+
+// Add or edit video entries here. Place video files in assets/videos/.
+const videoGalleryData = [
+  {
+    numeral: "I",
+    title: "VIDEO 01",
+    subtitle: "Tambahkan deskripsi video di sini",
+    src: "assets/videos/video-1.mp4",
+    poster: "assets/videos/video-1.jpg"
+  },
+  {
+    numeral: "II",
+    title: "VIDEO 02",
+    subtitle: "Tambahkan deskripsi video di sini",
+    src: "assets/videos/video-2.mp4",
+    poster: "assets/videos/video-2.jpg"
+  },
+  {
+    numeral: "III",
+    title: "VIDEO 03",
+    subtitle: "Tambahkan deskripsi video di sini",
+    src: "assets/videos/video-3.mp4",
+    poster: "assets/videos/video-3.jpg"
   }
 ];
 
@@ -231,6 +273,8 @@ let isSkillPageOpen = false;
 let currentSkillTab = "frontend";
 let isAboutPageOpen = false;
 let isContactPageOpen = false;
+let isVideoPageOpen = false;
+let selectedVideoIndex = 0;
 let selectedContactIndex = 0;
 let isWavyTransitionRunning = false;
 
@@ -278,6 +322,13 @@ const contactPage = document.getElementById("contact-page");
 const contactBgVideo = document.getElementById("contact-bg-video");
 const contactBackBtn = document.getElementById("contact-back-btn");
 const contactMailRows = document.querySelectorAll(".p3r-mail-row");
+
+// DOM Elements: Video Gallery Screen
+const videoPage = document.getElementById("video-page");
+const videoBgVideo = document.getElementById("video-bg-video");
+const videoHeaderDiv = document.getElementById("video-header-div");
+const videoGalleryContainer = document.getElementById("video-gallery-container");
+const videoBackBtn = document.getElementById("video-back-btn");
 
 // DOM Elements: Loading Screen
 const loadingScreen = document.getElementById("loading-screen");
@@ -609,6 +660,7 @@ function setIndex(index) {
   else if (index === 1 && skillBgVideo && skillBgVideo.preload !== "auto") skillBgVideo.preload = "auto";
   else if (index === 2 && aboutBgVideo && aboutBgVideo.preload !== "auto") aboutBgVideo.preload = "auto";
   else if (index === 3 && contactBgVideo && contactBgVideo.preload !== "auto") contactBgVideo.preload = "auto";
+  else if (index === 4 && videoBgVideo && videoBgVideo.preload !== "auto") videoBgVideo.preload = "auto";
 
   for (let idx = 0; idx < cachedOptionItems.length; idx++) {
     const item = cachedOptionItems[idx];
@@ -717,11 +769,13 @@ const getProjectOptionCenter = (evt) => getOptionCenter(0, evt, 0.62, 0.38);
 const getSkillOptionCenter   = (evt) => getOptionCenter(1, evt, 0.60, 0.48);
 const getAboutOptionCenter   = (evt) => getOptionCenter(2, evt, 0.58, 0.57);
 const getContactOptionCenter = (evt) => getOptionCenter(3, evt, 0.57, 0.66);
+const getVideoOptionCenter   = (evt) => getOptionCenter(4, evt, 0.55, 0.74);
 
 const getProjectExitOrigin = () => getExitOrigin(slinkBackBtn, window.innerWidth - 120, window.innerHeight - 55);
 const getSkillExitOrigin   = () => getExitOrigin(skillBackBtn, window.innerWidth - 120, window.innerHeight - 55);
 const getAboutExitOrigin   = () => getExitOrigin(aboutBackBtn, window.innerWidth - 120, window.innerHeight - 55);
 const getContactExitOrigin = () => getExitOrigin(contactBackBtn, 80, window.innerHeight - 60);
+const getVideoExitOrigin   = () => getExitOrigin(videoBackBtn, window.innerWidth - 120, window.innerHeight - 55);
 
 // Unified WAAPI Ripple Reveal & Close Transitions
 function executeWavyReveal({
@@ -1201,6 +1255,64 @@ function closeContactPage() {
 }
 
 // --------------------------------------------------------------------------
+// 10. Video Gallery
+function triggerVideoTitleAnimation() {
+  if (videoHeaderDiv) {
+    videoHeaderDiv.classList.remove("animating");
+    void videoHeaderDiv.offsetWidth;
+    videoHeaderDiv.classList.add("animating");
+  }
+}
+function renderVideoGallery() {
+  if (!videoGalleryContainer) return;
+  videoGalleryContainer.innerHTML = "";
+  videoGalleryData.forEach((item, idx) => {
+    const card = document.createElement("article");
+    card.className = `p3r-video-card ${idx === selectedVideoIndex ? "active" : ""}`;
+    card.innerHTML = `
+      <div class="p3r-video-player-wrap">
+        <video class="p3r-video-player" controls playsinline preload="metadata" ${item.poster ? `poster="${item.poster}"` : ""}>
+          <source src="${item.src}" type="video/mp4">
+          Browser Anda tidak mendukung pemutar video.
+        </video>
+      </div>
+      <div class="p3r-video-card-info">
+        <div class="p3r-video-number">${item.numeral}</div>
+        <div class="p3r-video-copy"><h2>${item.title}</h2><p>${item.subtitle}</p></div>
+      </div><div class="p3r-video-accent" aria-hidden="true"></div>`;
+    card.addEventListener("mouseenter", () => {
+      document.querySelectorAll(".p3r-video-card").forEach(el => el.classList.remove("active"));
+      card.classList.add("active");
+      selectedVideoIndex = idx;
+    });
+    videoGalleryContainer.appendChild(card);
+  });
+}
+function openVideoPage(clickEvent) {
+  if (isVideoPageOpen || isWavyTransitionRunning) return;
+  isVideoPageOpen = true;
+  selectedVideoIndex = 0;
+  playSFX();
+  executeWavyReveal({
+    pageEl: videoPage,
+    origin: getVideoOptionCenter(clickEvent),
+    bodyClass: "video-screen-active",
+    videoEl: videoBgVideo,
+    onStart: () => { renderVideoGallery(); triggerVideoTitleAnimation(); }
+  });
+}
+function closeVideoPage() {
+  if (!isVideoPageOpen || isWavyTransitionRunning) return;
+  isVideoPageOpen = false;
+  if (videoGalleryContainer) videoGalleryContainer.querySelectorAll("video").forEach(video => video.pause());
+  executeWavyClose({
+    pageEl: videoPage,
+    exitOrigin: getVideoExitOrigin(),
+    bodyClass: "video-screen-active",
+    videoEl: videoBgVideo
+  });
+}
+
 // 10. Portfolio Modal System (General Fallback for ITEM, EQUIP, SYSTEM)
 // --------------------------------------------------------------------------
 function getModalExitOrigin() {
@@ -1287,6 +1399,8 @@ function handleOptionConfirm(index, clickEvent) {
     openAboutPage(clickEvent);
   } else if (index === 3) {
     openContactPage(clickEvent);
+  } else if (index === 4) {
+    openVideoPage(clickEvent);
   }
 }
 
@@ -1470,6 +1584,7 @@ if (skillTabPrevBtn) skillTabPrevBtn.addEventListener("click", prevSkillTab);
 if (skillTabNextBtn) skillTabNextBtn.addEventListener("click", nextSkillTab);
 if (aboutBackBtn) aboutBackBtn.addEventListener("click", closeAboutPage);
 if (contactBackBtn) contactBackBtn.addEventListener("click", closeContactPage);
+if (videoBackBtn) videoBackBtn.addEventListener("click", closeVideoPage);
 
 if (contactMailRows && contactMailRows.length > 0) {
   contactMailRows.forEach((row, idx) => {
@@ -1549,6 +1664,12 @@ document.addEventListener("keydown", (e) => {
     return;
   }
 
+  // Active Screen: Video Gallery
+  if (isVideoPageOpen) {
+    if (e.key === "Escape" || e.key.toLowerCase() === "b" || e.key.toLowerCase() === "backspace") { e.preventDefault(); closeVideoPage(); }
+    return;
+  }
+
   // Active Screen: Modal
   if (isModalOpen) {
     if (e.key === "Escape" || e.key.toLowerCase() === "a") {
@@ -1594,6 +1715,8 @@ window.openAboutPage = openAboutPage;
 window.closeAboutPage = closeAboutPage;
 window.openContactPage = openContactPage;
 window.closeContactPage = closeContactPage;
+window.openVideoPage = openVideoPage;
+window.closeVideoPage = closeVideoPage;
 window.triggerContactPhoneAnimation = triggerContactPhoneAnimation;
 window.playWavyCircleTransition = playWavyCircleTransition;
 
@@ -1634,6 +1757,11 @@ if (window.innerWidth < 1024) {
   isStarted = true;
   isLoaded = true;
   openContactPage();
+} else if (urlParams.get("page") === "video" || urlParams.get("page") === "videos") {
+  if (loadingScreen) loadingScreen.style.display = "none";
+  isStarted = true;
+  isLoaded = true;
+  openVideoPage();
 } else if (urlParams.get("skip_loading") === "1") {
   if (loadingScreen) loadingScreen.style.display = "none";
   enterExperience();
