@@ -2146,3 +2146,50 @@ body.about-screen-active .character-viewport {
 
 
 
+
+
+/* Persona 3 Reload - Video Gallery */
+.p3r-video-screen .p3r-video-viewport {
+  align-items: flex-start;
+  overflow-y: auto;
+  padding-top: 4vh;
+  padding-bottom: 7rem;
+}
+.p3r-video-left-column { width: min(74vw, 1180px); max-height: 92vh; }
+.p3r-video-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+  width: 100%;
+  margin-top: 1.4rem;
+  padding: .3rem .7rem 2rem .2rem;
+}
+.p3r-video-card {
+  position: relative; min-width: 0; overflow: hidden;
+  background: linear-gradient(120deg, rgba(3,31,100,.96), rgba(0,18,51,.94));
+  border: 1px solid rgba(125,230,253,.5);
+  transform: skewX(-2deg);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.p3r-video-card.active, .p3r-video-card:hover {
+  border-color: #fff; transform: skewX(-2deg) translateY(-3px);
+  box-shadow: 0 0 0 1px rgba(22,207,251,.45), 0 12px 28px rgba(0,0,0,.35);
+}
+.p3r-video-player-wrap { width: 100%; aspect-ratio: 16 / 9; background: #000; overflow: hidden; }
+.p3r-video-player { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+.p3r-video-card-info { display: flex; align-items: center; gap: .9rem; padding: .8rem 1rem 1rem; transform: skewX(2deg); }
+.p3r-video-number {
+  display: grid; place-items: center; min-width: 2.5rem; height: 2.5rem;
+  color: #031f64; background: #7de6fd; font-family: var(--font-rodin); font-size: 1.1rem; font-style: italic;
+}
+.p3r-video-copy { min-width: 0; }
+.p3r-video-copy h2 { color: #fff; font-family: var(--font-rodin); font-size: clamp(.95rem, 1.2vw, 1.35rem); text-transform: uppercase; overflow-wrap: anywhere; }
+.p3r-video-copy p { margin-top: .25rem; color: #7de6fd; font-family: var(--font-rodin-medium); font-size: clamp(.72rem, .85vw, .95rem); line-height: 1.4; overflow-wrap: anywhere; }
+.p3r-video-accent { height: 4px; width: 38%; margin-left: auto; background: linear-gradient(90deg, #ff0000, #fd77d9, transparent); }
+@media (max-width: 1200px) { .p3r-video-left-column { width: 80vw; } }
+@media (max-width: 800px) { .p3r-video-gallery { grid-template-columns: 1fr; } .p3r-video-left-column { width: 88vw; } }
+
+.menu-column.menu-entered .option-item:nth-of-type(5) {
+  animation: p3rMenuEntrance 0.52s cubic-bezier(0.16, 1, 0.3, 1) 0.38s forwards;
+}
