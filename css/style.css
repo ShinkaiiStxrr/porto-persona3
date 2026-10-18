@@ -146,11 +146,8 @@ body.project-screen-active .side-number {
   line-height: 1.6;
 }
 
-@media (max-width: 1023px) {
-  .mobile-warning {
-    display: flex;
-  }
-}
+/* Mobile support: never block small screens with the desktop-only warning. */
+.mobile-warning { display: none !important; }
 
 /* --------------------------------------------------------------------------
    Main Screen Container
@@ -2192,4 +2189,179 @@ body.about-screen-active .character-viewport {
 
 .menu-column.menu-entered .option-item:nth-of-type(5) {
   animation: p3rMenuEntrance 0.52s cubic-bezier(0.16, 1, 0.3, 1) 0.38s forwards;
+}
+
+
+/* ======================================================================
+   MOBILE / TOUCH SUPPORT — keep the Persona 3 Reload visual identity
+   ====================================================================== */
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+button, a, .option-hitbox, .slink-card, .p3r-skill-tab, .control-item {
+  touch-action: manipulation;
+}
+button, .option-hitbox, .slink-card, .p3r-skill-tab, .control-item {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 1023px) {
+  html, body, .p3r-main {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+  .mobile-warning { display: none !important; }
+  .p3r-main { height: 100dvh; }
+  .background-video { height: 100dvh; object-fit: cover; object-position: center bottom; }
+  .p3r-global-vignette {
+    background: linear-gradient(to bottom, rgba(0,0,0,.28), transparent 20%, transparent 78%, rgba(0,0,0,.38));
+  }
+
+  /* Main menu: compact, centered and large enough to tap. */
+  .menu-column {
+    left: 2vw !important;
+    top: 54% !important;
+    max-width: 96vw;
+    transform: translateY(-50%) scale(clamp(.43, 0.53, .58)) !important;
+    transform-origin: left center !important;
+  }
+  .menu-profile-header {
+    top: 2.2vh;
+    right: 4vw;
+    max-width: 88vw;
+  }
+  .profile-name-text { font-size: clamp(1.15rem, 5vw, 2rem); }
+  .profile-accent-line { width: clamp(130px, 42vw, 220px); height: 3px; }
+  .option-hitbox { min-height: 48px; height: max(3.2rem, 48px); }
+  .hud-controls { transform: scale(.82); transform-origin: bottom right; right: 2vw; bottom: 1.5vh; }
+  .controls-guide { display: none !important; }
+  .side-number { display: none !important; }
+
+  /* Sub-pages use the full screen and can scroll vertically. */
+  .slink-viewport,
+  .p3r-skill-viewport,
+  .p3r-about-viewport {
+    height: 100dvh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 2.5vh 0 5rem;
+    align-items: flex-start;
+  }
+  .slink-left-column,
+  .p3r-skill-left-column,
+  .p3r-about-left-column,
+  .p3r-video-left-column {
+    width: 92vw !important;
+    max-width: 92vw !important;
+    max-height: none;
+    margin: 0 auto;
+  }
+  .slink-profile-header { margin: 1rem 0 1.2rem 2vw; }
+  .slink-cards-container {
+    width: 100%;
+    margin-left: 1vw;
+    gap: 12px;
+    --card-height: 70px;
+  }
+  .slink-card {
+    width: 95%;
+    max-width: 95%;
+    height: 70px;
+    margin-left: calc(var(--card-idx, 0) * 1vw);
+  }
+  .card-title-text { font-size: clamp(.9rem, 3.5vw, 1.15rem) !important; }
+  .card-subtitle-text { font-size: clamp(.62rem, 2.5vw, .78rem) !important; }
+  .slink-bottom-hud,
+  .p3r-skill-bottom-hud,
+  .p3r-about-bottom-hud,
+  .p3r-contact-bottom-hud {
+    position: fixed;
+    right: 3vw;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    left: auto;
+    z-index: 250;
+  }
+  .slink-hud-btn, .control-item { min-height: 44px; }
+
+  /* Skills categories and rows remain readable and tappable. */
+  .p3r-skill-tabs {
+    margin: 1rem 0 1.2rem;
+    gap: 8px;
+  }
+  .p3r-skill-tab { min-height: 44px; padding: .65rem .85rem; }
+  .p3r-skills-container { width: 100%; max-width: 100%; }
+
+  /* About page: cards fit the phone width instead of overflowing. */
+  .p3r-about-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 0 5rem;
+    padding: 1.1rem;
+    gap: 1rem;
+  }
+
+  /* Contact screen: replace the oversized desktop phone mockup with a
+     touch-friendly, scrollable layout while preserving its dark blue theme. */
+  .p3r-contact-viewport {
+    height: 100dvh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    align-items: flex-start;
+    padding: 3vh 4vw 6rem;
+  }
+  .p3r-mail-phone-wrap {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 70vh;
+    transform: none !important;
+    margin: 0 auto 4rem;
+  }
+  .p3r-mail-phone-card { padding: 1rem; }
+
+  /* Video gallery becomes one column and fits the phone. */
+  .p3r-video-screen .p3r-video-viewport {
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 2.5vh 0 6rem;
+  }
+  .p3r-video-gallery { grid-template-columns: minmax(0, 1fr) !important; gap: 1rem; }
+  .p3r-video-card { width: 100%; }
+  .p3r-video-card-info { padding: .7rem; gap: .6rem; }
+  .p3r-video-number { min-width: 2rem; height: 2rem; font-size: .95rem; }
+}
+
+@media (max-width: 480px) {
+  .menu-column {
+    left: -2vw !important;
+    top: 55% !important;
+    transform: translateY(-50%) scale(.44) !important;
+  }
+  .menu-profile-header { top: 2vh; right: 3vw; }
+  .profile-name-text { font-size: clamp(1rem, 5vw, 1.45rem); }
+  .slink-profile-name { font-size: .85rem; }
+  .p3r-banner-title { font-size: clamp(2rem, 10vw, 3rem) !important; }
+  .slink-card { height: 64px; }
+  .slink-cards-container { --card-height: 64px; }
+  .card-numeral-box { min-width: 2.2rem; }
+  .card-title-text { font-size: .88rem !important; }
+  .card-subtitle-text { font-size: .6rem !important; }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .menu-column { left: 1vw !important; top: 53% !important; transform: translateY(-50%) scale(.36) !important; }
+  .menu-profile-header { top: 1vh; right: 2vw; }
+  .profile-name-text { font-size: 1rem; }
+  .slink-viewport, .p3r-skill-viewport, .p3r-about-viewport { padding-top: 1vh; }
 }
