@@ -2365,3 +2365,43 @@ button, .option-hitbox, .slink-card, .p3r-skill-tab, .control-item {
   .profile-name-text { font-size: 1rem; }
   .slink-viewport, .p3r-skill-viewport, .p3r-about-viewport { padding-top: 1vh; }
 }
+
+
+/* ABOUT + CONTACT: align both subpages with the Project Social Link card system */
+.p3r-about-viewport, .p3r-contact-viewport { align-items: flex-start; }
+.p3r-about-left-column, .p3r-contact-left-column { width: min(780px, 76vw); max-width: 100%; }
+.about-project-cards, .contact-project-cards { display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: 18px; padding: 0 0 90px; }
+.about-project-card, .contact-project-card { position: relative; display: flex; align-items: stretch; gap: 18px; width: 100%; min-height: 90px; padding: 18px 22px; overflow: hidden; color: #f7fbff; text-decoration: none; background: linear-gradient(105deg, rgba(7, 15, 35, .94), rgba(9, 28, 54, .88)); border: 1px solid rgba(150, 220, 255, .38); border-left: 5px solid #67d8ff; clip-path: polygon(0 0, 98.5% 0, 100% 18%, 100% 100%, 1.5% 100%, 0 82%); box-shadow: 0 8px 24px rgba(0,0,0,.22); animation: slinkCardIn .45s both; }
+.about-project-card:nth-child(2), .contact-project-card:nth-child(2) { animation-delay: .08s; }
+.about-project-card:nth-child(3) { animation-delay: .16s; }
+.about-card-index, .contact-card-index { flex: 0 0 46px; display: flex; align-items: flex-start; justify-content: center; padding-top: 3px; color: #75ddff; font-size: 1.05rem; font-weight: 800; letter-spacing: .08em; border-right: 1px solid rgba(137, 219, 255, .32); }
+.about-card-main, .contact-card-main { min-width: 0; flex: 1; }
+.about-card-main h2, .about-card-main h3, .contact-card-main h2 { margin: 0 0 8px; color: #fff; font-weight: 800; letter-spacing: .045em; }
+.about-card-main h2, .contact-card-main h2 { font-size: clamp(1rem, 2vw, 1.35rem); }
+.about-card-main h3, .contact-card-kicker { font-size: .78rem; }
+.about-card-main p, .contact-card-main p { margin: 8px 0 0; color: rgba(235, 246, 255, .83); font-size: .9rem; line-height: 1.65; }
+.about-profile-top { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+.about-project-photo { width: 76px; height: 76px; object-fit: cover; border: 2px solid #77dfff; box-shadow: 4px 4px 0 rgba(65, 187, 255, .24); }
+.about-card-subtitle, .contact-card-kicker { display: block; margin: 4px 0; color: #72dcff !important; font-size: .72rem !important; font-weight: 800; letter-spacing: .15em; }
+.about-card-meta { margin-top: 3px !important; font-size: .72rem !important; letter-spacing: .06em; }
+.about-quote-text { font-size: 1.08rem !important; font-style: italic; font-weight: 600; }
+.contact-project-card { align-items: center; min-height: 118px; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.contact-project-card[href]:hover, .contact-project-card[href]:focus-visible, .contact-project-card.active { transform: translateX(5px); border-color: #8be5ff; background: linear-gradient(105deg, rgba(12, 48, 78, .97), rgba(8, 22, 44, .94)); outline: none; }
+.contact-card-arrow { color: #79ddff; font-size: 1.8rem; font-weight: 700; }
+.p3r-contact-viewport .slink-bottom-hud { right: 4vw; left: auto; }
+@media (max-width: 1023px) {
+  .p3r-about-viewport, .p3r-contact-viewport { display: block; overflow-y: auto; padding: 22px 16px 100px; }
+  .p3r-about-left-column, .p3r-contact-left-column { width: 100%; max-width: 100%; }
+  .about-project-cards, .contact-project-cards { margin-top: 12px; gap: 10px; padding-bottom: 26px; }
+  .about-project-card, .contact-project-card { padding: 15px 13px; gap: 12px; }
+  .about-card-index, .contact-card-index { flex-basis: 32px; font-size: .9rem; }
+  .about-project-photo { width: 62px; height: 62px; }
+  .about-card-main p, .contact-card-main p { font-size: .84rem; }
+  .p3r-contact-viewport .slink-bottom-hud { position: fixed; right: 16px; bottom: 12px; left: auto; }
+}
+@media (max-width: 420px) {
+  .about-profile-top { align-items: flex-start; gap: 11px; }
+  .about-project-photo { width: 54px; height: 54px; }
+  .about-card-meta { font-size: .65rem !important; }
+  .about-project-card, .contact-project-card { clip-path: none; border-radius: 2px; }
+}
