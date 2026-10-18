@@ -1729,16 +1729,8 @@ window.triggerContactPhoneAnimation = triggerContactPhoneAnimation;
 window.playWavyCircleTransition = playWavyCircleTransition;
 
 // URL Navigation Shortcuts & Responsive Init
-if (window.innerWidth < 1024) {
-  // Mobile / Small screen mode: cleanly dismiss loading HUD and exit immediately
-  if (loadingScreen) loadingScreen.style.display = "none";
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1024 && !isStarted) {
-      loadAudioBuffers();
-      startLoadingSequence();
-    }
-  }, { once: true });
-} else if (urlParams.get("page") === "project") {
+// Handle direct page links first so they also work on phones and tablets.
+if (urlParams.get("page") === "project") {
   if (loadingScreen) loadingScreen.style.display = "none";
   isStarted = true;
   isLoaded = true;
@@ -1770,6 +1762,11 @@ if (window.innerWidth < 1024) {
   isStarted = true;
   isLoaded = true;
   openVideoPage();
+} else if (window.innerWidth < 1024) {
+  // Mobile/tablet: skip the desktop loading sequence, but still enter the menu.
+  if (loadingScreen) loadingScreen.style.display = "none";
+  enterExperience();
+  switchToLoopVideo();
 } else if (urlParams.get("skip_loading") === "1") {
   if (loadingScreen) loadingScreen.style.display = "none";
   enterExperience();
