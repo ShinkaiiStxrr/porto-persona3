@@ -182,14 +182,14 @@ const videoGalleryData = [
     numeral: "I",
     title: "VIDEO 01",
     subtitle: "Tambahkan deskripsi video di sini",
-    src: "assets\video-1.mp4",
+    src: "assets/videos/video-1.mp4",
     poster: "assets/videos/video-1.jpg"
   },
   {
     numeral: "II",
     title: "VIDEO 02",
     subtitle: "Tambahkan deskripsi video di sini",
-    src: "assets/video-2.mp4",
+    src: "assets/videos/video-2.mp4",
     poster: "assets/videos/video-2.jpg"
   },
   {
