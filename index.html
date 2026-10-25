@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Persona 3 Reload Pause Menu | Portfolio</title>
-  <meta name="description" content="Pixel-perfect recreation of Persona 3 Reload's Pause Menu built with pure HTML, CSS, and JavaScript.">
+  <title>Menu Jeda Persona 3 Reload | Portofolio</title>
+  <meta name="description" content="Rekreasi menu jeda Persona 3 Reload yang dibuat menggunakan HTML, CSS, dan JavaScript.">
   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
   <meta name="theme-color" content="#001233">
   <link rel="canonical" href="https://aiosssss.github.io/porto-persona3/">
@@ -18,8 +18,8 @@
 <body>
   <!-- Mobile / Small Screen Notification -->
   <div class="mobile-warning">
-    <p>Sorry, this website is not supported for your device.</p>
-    <p>Try viewing this site on a computer!</p>
+    <p>Maaf, situs ini tidak mendukung perangkat yang kamu gunakan.</p>
+    <p>Coba buka situs ini melalui komputer!</p>
   </div>
 
 
@@ -28,7 +28,7 @@
     <!-- Bottom-Right Loading HUD -->
     <div class="loading-hud-bottom">
       <div class="loading-text-row">
-        <h2 class="loading-title">NOW LOADING<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></h2>
+        <h2 class="loading-title">SEDANG MEMUAT<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></h2>
       </div>
 
       <div class="loading-bar-wrap">
@@ -45,7 +45,7 @@
     <!-- Atmospheric Side Vignette: Subtle soft faded black on the sides across all pages -->
     <div class="p3r-global-vignette" aria-hidden="true"></div>
 
-    <!-- Background Videos in Menu Utama: bg-intro then bg-loop -->
+    <!-- Kembaliground Videos in Menu Utama: bg-intro then bg-loop -->
     <video
       id="background-video-intro"
       class="background-video bg-video-intro"
@@ -88,11 +88,11 @@
       <div class="buttons-row">
         <div class="control-item">
           <div class="control-key">ENTER</div>
-          <span class="control-text">Confirm</span>
+          <span class="control-text">Pilih</span>
         </div>
         <div class="control-item">
           <div class="control-key">ESC</div>
-          <span class="control-text">Close</span>
+          <span class="control-text">Tutup</span>
         </div>
       </div>
     </div>
@@ -107,8 +107,8 @@
   <div id="wavy-transition-portal" class="wavy-transition-portal" aria-hidden="true" style="display: none;"></div>
 
   <!-- Persona 3 Reload - Social Link Style Project Screen -->
-  <section id="project-page" class="p3r-slink-screen" role="region" aria-label="Projects Social Link Screen" aria-hidden="true">
-    <!-- Project Screen Animated Video Background (Makoto Wallpaper) -->
+  <section id="project-page" class="p3r-slink-screen" role="region" aria-label="Layar Tautan Sosial Proyek" aria-hidden="true">
+    <!-- Project Screen Animated Video Kembaliground (Makoto Wallpaper) -->
     <div class="slink-video-container" aria-hidden="true">
       <video id="slink-bg-video" class="slink-bg-video" loop muted playsinline preload="none">
         <source src="assets/skills-bg.mp4" type="video/mp4">
@@ -118,7 +118,7 @@
 
     <!-- Main Viewport Layer matching user screenshot -->
     <div class="slink-viewport">
-      <!-- Left Column: PROJECT Header + Cards Stack -->
+      <!-- Left Column: PROYEK Header + Cards Stack -->
       <div class="slink-left-column">
         <!-- Profile Sub-header matching Atlus P3R Layout -->
         <div class="slink-profile-header" aria-hidden="true">
@@ -127,7 +127,7 @@
 
         <!-- Persona 3 Reload Shattered Geometric Header Banner -->
         <div class="p3r-geometric-header" id="slink-project-div">
-          <!-- Fractured Background Sky-Blue Band (Extending from left) -->
+          <!-- Fractured Kembaliground Sky-Blue Band (Extending from left) -->
           <div class="p3r-shard-back-band" aria-hidden="true"></div>
           <!-- Fractured Cyan Peak Shard (Top-right acute blade) -->
           <div class="p3r-shard-cyan-peak" aria-hidden="true"></div>
@@ -139,11 +139,11 @@
           <div class="p3r-shard-float p3r-shard-float-1" aria-hidden="true"></div>
           <div class="p3r-shard-float p3r-shard-float-2" aria-hidden="true"></div>
           <!-- Crisp Pure White Title -->
-          <h1 class="p3r-banner-title" id="slink-project-text">PROJECT</h1>
+          <h1 class="p3r-banner-title" id="slink-project-text">PROYEK</h1>
         </div>
 
         <!-- Vertical Angled Cards Stack -->
-        <div id="slink-cards-container" class="slink-cards-container" role="tablist" aria-label="Project List">
+        <div id="slink-cards-container" class="slink-cards-container" role="tablist" aria-label="Daftar Proyek">
           <!-- Dynamically populated by main.js with exact P3R card design -->
         </div>
       </div>
@@ -151,13 +151,13 @@
       <!-- Bottom Right HUD: Controls matching Menu Utama style (Guide removed) -->
       <div class="slink-bottom-hud">
         <div class="buttons-row">
-          <button id="slink-confirm-btn" class="control-item slink-hud-btn" aria-label="Confirm Selection">
+          <button id="slink-confirm-btn" class="control-item slink-hud-btn" aria-label="Pilih Selection">
             <div class="control-key">ENTER</div>
-            <span class="control-text">Confirm</span>
+            <span class="control-text">Pilih</span>
           </button>
-          <button id="slink-back-btn" class="control-item slink-hud-btn" aria-label="Back to Main Menu">
+          <button id="slink-back-btn" class="control-item slink-hud-btn" aria-label="Kembali to Main Menu">
             <div class="control-key">ESC</div>
-            <span class="control-text">Back</span>
+            <span class="control-text">Kembali</span>
           </button>
         </div>
       </div>
@@ -165,11 +165,11 @@
   </section>
 
   <!-- ==========================================================================
-       Persona 3 Reload - SKILLS STATS PAGE
+       Persona 3 Reload - KEAHLIANS STATS PAGE
        Dedicated Screen matching P3R Aesthetic with Stats Bars concept from P5
        ========================================================================== -->
-  <section id="skill-page" class="p3r-slink-screen p3r-skill-screen" role="region" aria-label="Skills Stats Screen" aria-hidden="true">
-    <!-- Video Background (Makoto Wallpaper) -->
+  <section id="skill-page" class="p3r-slink-screen p3r-skill-screen" role="region" aria-label="Layar Statistik Keahlian" aria-hidden="true">
+    <!-- Video Kembaliground (Makoto Wallpaper) -->
     <div class="slink-video-container" aria-hidden="true">
       <video id="skill-bg-video" class="slink-bg-video" loop muted playsinline preload="none">
         <source src="assets/makoto-wallpaper.mp4" type="video/mp4">
@@ -179,30 +179,30 @@
 
     <!-- Main Viewport Layer -->
     <div class="slink-viewport p3r-skill-viewport">
-      <!-- Left Column: Profile Name + SKILLS Header + Category Tabs + Skill Stats Grid -->
+      <!-- Left Column: Profile Name + KEAHLIANS Header + Category Tabs + Skill Stats Grid -->
       <div class="slink-left-column p3r-skill-left-column">
         <!-- Profile Sub-header -->
         <div class="slink-profile-header" aria-hidden="true">
           <div class="slink-profile-name">MOCH RIVHALDY</div>
         </div>
 
-        <!-- Persona 3 Reload Shattered Geometric Header Banner for SKILLS -->
+        <!-- Persona 3 Reload Shattered Geometric Header Banner for KEAHLIANS -->
         <div class="p3r-geometric-header" id="skill-header-div">
-          <!-- Fractured Background Sky-Blue Band (Solid Light-Blue Shadow) -->
+          <!-- Fractured Kembaliground Sky-Blue Band (Solid Light-Blue Shadow) -->
           <div class="p3r-shard-back-band" aria-hidden="true"></div>
           <!-- Main Dark Midnight Blue Razor-Cut Banner -->
           <div class="p3r-header-slash-main" aria-hidden="true"></div>
           <!-- Crisp Pure White Title -->
-          <h1 class="p3r-banner-title" id="skill-header-text">SKILLS</h1>
+          <h1 class="p3r-banner-title" id="skill-header-text">KEAHLIANS</h1>
         </div>
 
         <!-- Category Filter Tabs -->
-        <div class="p3r-skill-tabs" id="skill-tabs-nav" role="tablist" aria-label="Skill Categories">
+        <div class="p3r-skill-tabs" id="skill-tabs-nav" role="tablist" aria-label="Kategori Keahlian">
           <!-- Dynamically populated by main.js: ALL, FRONTEND, BACKEND, AI & ML, CREATIVE -->
         </div>
 
         <!-- Skills Stats Container -->
-        <div id="p3r-skills-container" class="p3r-skills-container" role="region" aria-label="Skill Stats List">
+        <div id="p3r-skills-container" class="p3r-skills-container" role="region" aria-label="Daftar Statistik Keahlian">
           <!-- Dynamically populated by main.js with stats skill rows and animated meters -->
         </div>
       </div>
@@ -210,35 +210,35 @@
       <!-- Bottom Right HUD: Controls matching Menu Utama & Project style -->
       <div class="slink-bottom-hud">
         <div class="buttons-row">
-          <button id="skill-tab-prev-btn" class="control-item slink-hud-btn" aria-label="Previous Category">
+          <button id="skill-tab-prev-btn" class="control-item slink-hud-btn" aria-label="Sebelumnyaious Category">
             <div class="control-key">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
               </svg>
             </div>
-            <span class="control-text">Prev</span>
+            <span class="control-text">Sebelumnya</span>
           </button>
-          <button id="skill-tab-next-btn" class="control-item slink-hud-btn" aria-label="Next Category">
+          <button id="skill-tab-next-btn" class="control-item slink-hud-btn" aria-label="Berikutnya Category">
             <div class="control-key">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </div>
-            <span class="control-text">Next</span>
+            <span class="control-text">Berikutnya</span>
           </button>
-          <button id="skill-back-btn" class="control-item slink-hud-btn" aria-label="Close Skills Screen">
+          <button id="skill-back-btn" class="control-item slink-hud-btn" aria-label="Tutup Skills Screen">
             <div class="control-key">ESC</div>
-            <span class="control-text">Close</span>
+            <span class="control-text">Tutup</span>
           </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT PAGE styled to match the Project Social Link menu -->
-  <section id="about-page" class="p3r-slink-screen p3r-about-screen" role="region" aria-label="About Screen" aria-hidden="true">
+  <!-- TENTANG SAYA PAGE styled to match the Project Social Link menu -->
+  <section id="about-page" class="p3r-slink-screen p3r-about-screen" role="region" aria-label="Tentang Saya" aria-hidden="true">
     <div class="slink-video-container" aria-hidden="true">
       <video id="about-bg-video" class="slink-bg-video" loop muted playsinline preload="none"><source src="assets/about-bg.mp4" type="video/mp4"></video>
       <div class="slink-video-overlay" aria-hidden="true"></div>
@@ -248,30 +248,30 @@
         <div class="slink-profile-header" aria-hidden="true"><div class="slink-profile-name">MOCH RIVHALDY</div></div>
         <div class="p3r-geometric-header" id="about-header-div">
           <div class="p3r-shard-back-band" aria-hidden="true"></div><div class="p3r-shard-cyan-peak" aria-hidden="true"></div><div class="p3r-shard-right-cyan" aria-hidden="true"></div><div class="p3r-header-slash-main" aria-hidden="true"></div><div class="p3r-shard-float p3r-shard-float-1" aria-hidden="true"></div><div class="p3r-shard-float p3r-shard-float-2" aria-hidden="true"></div>
-          <h1 class="p3r-banner-title" id="about-header-text">ABOUT</h1>
+          <h1 class="p3r-banner-title" id="about-header-text">TENTANG SAYA</h1>
         </div>
-        <div class="about-project-cards" role="region" aria-label="About Profile Details">
+        <div class="about-project-cards" role="region" aria-label="Detail Profil Tentang Saya">
           <article class="about-project-card about-profile-card">
             <div class="about-card-index">01</div>
             <div class="about-card-main">
-              <div class="about-profile-top"><img src="assets/profile.jpg" alt="Moch Rivhaldy" class="about-project-photo"><div><h2>MOCH RIVHALDY</h2><p class="about-card-subtitle">FRONTEND DESIGN</p><p class="about-card-meta">SMAN 1 CILILIN · HIGH SCHOOL STUDENT</p></div></div>
-              <p>Hi! I am <strong>MOCH RIVHALDY</strong>, a high school student at <strong>SMAN 1 CILILIN</strong> with a passionate focus on frontend design and web development.</p>
+              <div class="about-profile-top"><img src="assets/profile.jpg" alt="Moch Rivhaldy" class="about-project-photo"><div><h2>MOCH RIVHALDY</h2><p class="about-card-subtitle">DESAIN FRONTEND</p><p class="about-card-meta">SMAN 1 CILILIN · SISWA SMA</p></div></div>
+              <p>Halo! Saya <strong>MOCH RIVHALDY</strong>, a high school student at <strong>SMAN 1 CILILIN</strong> yang berfokus pada desain frontend dan pengembangan web.</p>
             </div>
           </article>
           <article class="about-project-card">
-            <div class="about-card-index">02</div><div class="about-card-main"><h3>WHAT I DO</h3><p>I focus on frontend design, creating clean layouts, modern typography, and responsive web interfaces. This portfolio is inspired by the visual style and dynamic motion of <em>Persona 3 Reload</em>.</p></div>
+            <div class="about-card-index">02</div><div class="about-card-main"><h3>YANG SAYA LAKUKAN</h3><p>Saya berfokus pada desain frontend, membuat tata letak yang rapi, tipografi modern, dan antarmuka web yang responsif. Portofolio ini terinspirasi oleh gaya visual dan gerakan dinamis dari <em>Persona 3 Reload</em>.</p></div>
           </article>
           <article class="about-project-card about-quote-card">
             <div class="about-card-index">03</div><div class="about-card-main"><p class="about-quote-text">“The only way to do great work is to love what you do.”</p><p class="about-card-subtitle">STEVE JOBS</p></div>
           </article>
         </div>
       </div>
-      <div class="slink-bottom-hud"><div class="buttons-row"><button id="about-back-btn" class="control-item slink-hud-btn" aria-label="Close About Screen"><div class="control-key">ESC</div><span class="control-text">Back</span></button></div></div>
+      <div class="slink-bottom-hud"><div class="buttons-row"><button id="about-back-btn" class="control-item slink-hud-btn" aria-label="Tutup Tentang Saya"><div class="control-key">ESC</div><span class="control-text">Kembali</span></button></div></div>
     </div>
   </section>
 
-  <!-- CONTACT PAGE styled to match the Project Social Link menu -->
-  <section id="contact-page" class="p3r-slink-screen p3r-contact-screen" role="region" aria-label="Contact Screen" aria-hidden="true">
+  <!-- KONTAK PAGE styled to match the Project Social Link menu -->
+  <section id="contact-page" class="p3r-slink-screen p3r-contact-screen" role="region" aria-label="Halaman Kontak" aria-hidden="true">
     <div class="slink-video-container" aria-hidden="true">
       <video id="contact-bg-video" class="slink-bg-video" loop muted playsinline preload="none"><source src="assets/contact-bg.mp4" type="video/mp4"></video>
       <div class="slink-video-overlay p3r-contact-overlay" aria-hidden="true"></div>
@@ -281,16 +281,16 @@
         <div class="slink-profile-header" aria-hidden="true"><div class="slink-profile-name">MOCH RIVHALDY</div></div>
         <div class="p3r-geometric-header" id="contact-header-div">
           <div class="p3r-shard-back-band" aria-hidden="true"></div><div class="p3r-shard-cyan-peak" aria-hidden="true"></div><div class="p3r-shard-right-cyan" aria-hidden="true"></div><div class="p3r-header-slash-main" aria-hidden="true"></div><div class="p3r-shard-float p3r-shard-float-1" aria-hidden="true"></div><div class="p3r-shard-float p3r-shard-float-2" aria-hidden="true"></div>
-          <h1 class="p3r-banner-title" id="contact-header-text">CONTACT</h1>
+          <h1 class="p3r-banner-title" id="contact-header-text">KONTAK</h1>
         </div>
-        <div class="contact-project-cards" role="list" aria-label="Contact Channels">
-          <a href="mailto:shinkaiatthefunction@gmail.com" class="contact-project-card p3r-mail-row active" data-idx="0" role="listitem" aria-label="Email via Gmail">
-            <div class="contact-card-index">01</div><div class="contact-card-main"><span class="contact-card-kicker">EMAIL / GMAIL</span><h2>LET'S CONNECT</h2><p>shinkaiatthefunction@gmail.com</p></div><span class="contact-card-arrow" aria-hidden="true">↗</span>
+        <div class="contact-project-cards" role="list" aria-label="Saluran Kontak">
+          <a href="mailto:shinkaiatthefunction@gmail.com" class="contact-project-card p3r-mail-row active" data-idx="0" role="listitem" aria-label="Email melalui Gmail">
+            <div class="contact-card-index">01</div><div class="contact-card-main"><span class="contact-card-kicker">EMAIL / GMAIL</span><h2>MARI TERHUBUNG</h2><p>shinkaiatthefunction@gmail.com</p></div><span class="contact-card-arrow" aria-hidden="true">↗</span>
           </a>
-          <article class="contact-project-card contact-note-card" role="listitem"><div class="contact-card-index">02</div><div class="contact-card-main"><span class="contact-card-kicker">OPEN CHANNEL</span><h2>HAVE A PROJECT IN MIND?</h2><p>Feel free to send an email about collaborations, ideas, or questions. I will be happy to hear from you.</p></div></article>
+          <article class="contact-project-card contact-note-card" role="listitem"><div class="contact-card-index">02</div><div class="contact-card-main"><span class="contact-card-kicker">SALURAN TERBUKA</span><h2>PUNYA IDE PROYEK?</h2><p>Silakan kirim email tentang kolaborasi, ide, atau pertanyaan. Saya akan senang menerima pesan dari kamu.</p></div></article>
         </div>
       </div>
-      <div class="slink-bottom-hud"><div class="buttons-row"><button id="contact-back-btn" class="control-item slink-hud-btn" aria-label="Close Contact Screen"><div class="control-key">ESC</div><span class="control-text">Back</span></button></div></div>
+      <div class="slink-bottom-hud"><div class="buttons-row"><button id="contact-back-btn" class="control-item slink-hud-btn" aria-label="Tutup Halaman Kontak"><div class="control-key">ESC</div><span class="control-text">Kembali</span></button></div></div>
     </div>
   </section>
 
@@ -298,7 +298,7 @@
 
 
   <!-- Persona 3 Reload - VIDEO GALLERY PAGE -->
-  <section id="video-page" class="p3r-slink-screen p3r-video-screen" role="region" aria-label="Video Gallery" aria-hidden="true">
+  <section id="video-page" class="p3r-slink-screen p3r-video-screen" role="region" aria-label="Galeri Video" aria-hidden="true">
     <div class="slink-video-container" aria-hidden="true">
       <video id="video-bg-video" class="slink-bg-video" loop muted playsinline preload="none">
         <source src="assets/skills-bg.mp4" type="video/mp4">
@@ -317,12 +317,12 @@
           <div class="p3r-shard-float p3r-shard-float-2" aria-hidden="true"></div>
           <h1 class="p3r-banner-title" id="video-header-text">VIDEO</h1>
         </div>
-        <div id="video-gallery-container" class="p3r-video-gallery" aria-label="Video list"></div>
+        <div id="video-gallery-container" class="p3r-video-gallery" aria-label="Daftar video"></div>
       </div>
       <div class="slink-bottom-hud">
         <div class="buttons-row">
-          <button id="video-back-btn" class="control-item slink-hud-btn" aria-label="Back to Main Menu">
-            <div class="control-key">ESC</div><span class="control-text">Back</span>
+          <button id="video-back-btn" class="control-item slink-hud-btn" aria-label="Kembali to Main Menu">
+            <div class="control-key">ESC</div><span class="control-text">Kembali</span>
           </button>
         </div>
       </div>
@@ -334,10 +334,10 @@
     <div class="modal-card">
       <div class="modal-header">
         <div class="modal-title-wrap">
-          <span id="modal-tag" class="modal-tag">CATEGORY</span>
-          <h2 id="modal-title" class="modal-title">SKILL</h2>
+          <span id="modal-tag" class="modal-tag">KATEGORI</span>
+          <h2 id="modal-title" class="modal-title">KEAHLIAN</h2>
         </div>
-        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Tutup modal">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
             <line x1="2" y1="2" x2="12" y2="12"></line>
             <line x1="12" y1="2" x2="2" y2="12"></line>
@@ -355,7 +355,7 @@
       <div class="modal-footer">
         <div class="control-item">
           <div class="control-key">ESC</div>
-          <span class="control-text" id="modal-footer-close" style="cursor: pointer;">Close</span>
+          <span class="control-text" id="modal-footer-close" style="cursor: pointer;">Tutup</span>
         </div>
       </div>
     </div>
