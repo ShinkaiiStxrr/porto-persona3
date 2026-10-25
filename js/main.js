@@ -11,42 +11,45 @@
 const colors = ["fill-button-1", "fill-button-2", "fill-button-3"];
 
 const options = [
-  { name: "SEJARAH VIRUS", description: "Tonggak penemuan virus", rotation: -20, zIndex: 1, offsetX: -40, offsetY: 25, fontSize: "4.1rem", bannerScaleX: 1.07, bannerScaleY: 3.35, tag: "SEJARAH PENEMUAN", summary: "1883 Adolf Meyer · 1892 Dmitri Ivanovsky · 1897 Martinus Beijerinck · 1935 Wendell M. Stanley", cards: [{title:"1883 — Adolf Meyer",desc:"Penyakit mosaik tembakau."},{title:"1892 — Dmitri Ivanovsky",desc:"Agen infeksi lolos saringan bakteri."},{title:"1897 — Martinus Beijerinck",desc:"Menyebutnya “filterable virus”."},{title:"1935 — Wendell M. Stanley",desc:"Mengkristalkan partikel penyebab penyakit."}] },
-  { name: "STRUKTUR VIRUS", description: "Ciri, ukuran, bentuk, dan bagian virus", rotation: -12, zIndex: 2, offsetX: -65, offsetY: 30, fontSize: "4.1rem", bannerScaleX: 0.96, bannerScaleY: 3.05, tag: "CIRI & STRUKTUR", summary: "Virus aseluler dengan DNA atau RNA, kapsid, dan pada sebagian virus selubung", cards: [{title:"Apa itu virus?",desc:"Agen aseluler; partikel lengkap disebut virion."},{title:"Ukuran dan bentuk",desc:"Sekitar 20–300 nm; batang, bulat, filamen, polihedral, dan bentuk huruf T."},{title:"Bagian utama",desc:"Asam nukleat, kapsid, kapsomer, serta selubung pada sebagian virus."},{title:"Viroid dan prion",desc:"Viroid berupa RNA sirkuler tanpa kapsid; prion adalah protein infeksius."}] },
-  { name: "REPLIKASI VIRUS", description: "Daur litik dan lisogenik", rotation: -4, zIndex: 3, offsetX: -80, offsetY: 35, fontSize: "4.0rem", bannerScaleX: 1.02, bannerScaleY: 3.25, tag: "DAUR REPLIKASI", summary: "Virus memerlukan sel inang untuk bereplikasi", cards: [{title:"Daur litik",desc:"Adsorpsi, penetrasi, sintesis dan replikasi, perakitan, lalu lisis."},{title:"Daur lisogenik",desc:"Genom virus bergabung dengan DNA inang membentuk profag dan dapat diwariskan."},{title:"Perbedaan utama",desc:"Daur litik memecahkan sel; pada daur lisogenik sel inang dapat tetap membelah."}] },
-  { name: "KLASIFIKASI & MANFAAT", description: "Dasar pengelompokan dan pemanfaatan virus", rotation: 5, zIndex: 4, offsetX: -85, offsetY: 40, fontSize: "3.6rem", bannerScaleX: 1.04, bannerScaleY: 3.2, tag: "KLASIFIKASI & MANFAAT", summary: "Klasifikasi berdasarkan genom, bentuk, inang, dan ciri lainnya", cards: [{title:"Dasar klasifikasi",desc:"Asam nukleat, ukuran, bentuk, kapsomer, simetri, selubung, inang, dan sifat lainnya."},{title:"Klasifikasi Baltimore",desc:"Berdasarkan genom dan replikasi."},{title:"Manfaat virus",desc:"Pengembangan vaksin, rekayasa genetika, terapi gen, pengendalian hama, interferon, dan riset bioteknologi."}] },
-  { name: "PENYAKIT & PENCEGAHAN", description: "Penyakit, penularan, pencegahan, dan penanganan", rotation: 12, zIndex: 5, offsetX: -90, offsetY: 45, fontSize: "3.7rem", bannerScaleX: 1.02, bannerScaleY: 3.2, tag: "DAMPAK & PENCEGAHAN", summary: "Contoh penyakit virus pada manusia, hewan, dan tumbuhan serta cara mengurangi risiko infeksi", cards: [{title:"Penyakit akibat virus",desc:"Influenza, campak, polio, hepatitis, dengue, rabies, penyakit kuku dan mulut, tetelo, mosaik tembakau, dan tungro."},{title:"Penularan",desc:"Percikan atau udara, kontak atau cairan tubuh, vektor, makanan atau air tercemar, dan hewan ke manusia."},{title:"Pencegahan",desc:"Vaksinasi, cuci tangan, etika batuk, 3M Plus, dan menjaga kesehatan hewan."},{title:"Pengobatan",desc:"Antivirus tertentu, interferon, perawatan pendukung; antibiotik tidak bekerja melawan virus."}] }
+  { name: "PENGENALAN", description: "Sejarah penemuan dan definisi virus", rotation: -20, zIndex: 1, offsetX: -40, offsetY: 25, fontSize: "4.1rem", bannerScaleX: 1.07, bannerScaleY: 3.35, tag: "DASAR VIRUS", summary: "Dari penemuan awal hingga pengertian virus sebagai agen aseluler", cards: [{title:"1883 — Adolf Meyer",desc:"Meneliti penyakit mosaik tembakau."},{title:"1892 — Dmitri Ivanovsky",desc:"Menunjukkan agen infeksi dapat lolos dari saringan bakteri."},{title:"1897 — Martinus Beijerinck",desc:"Menyebut agen tersebut “filterable virus”."},{title:"1935 — Wendell M. Stanley",desc:"Mengkristalkan partikel penyebab penyakit."},{title:"Definisi",desc:"Virus adalah agen aseluler yang bereplikasi dengan bantuan sel hidup; partikel lengkap disebut virion."}] },
+  { name: "STRUKTUR", description: "Ukuran, bentuk, dan bagian penyusun", rotation: -12, zIndex: 2, offsetX: -65, offsetY: 30, fontSize: "4.1rem", bannerScaleX: 0.96, bannerScaleY: 3.05, tag: "ANATOMI VIRUS", summary: "Mengenali bagian fisik virus dan variasi bentuknya", cards: [{title:"Ukuran dan bentuk",desc:"Sekitar 20–300 nm; bentuk batang, bulat, filamen, polihedral, dan seperti huruf T."},{title:"Asam nukleat",desc:"Membawa informasi genetik berupa DNA atau RNA."},{title:"Kapsid dan kapsomer",desc:"Kapsid adalah lapisan protein pelindung; kapsomer merupakan subunit penyusunnya."},{title:"Selubung",desc:"Sebagian virus memiliki selubung membran; tidak semua virus memiliki struktur yang sama."},{title:"Viroid dan prion",desc:"Viroid berupa RNA sirkuler tanpa kapsid; prion merupakan protein infeksius."}] },
+  { name: "REPLIKASI", description: "Tahapan daur litik dan lisogenik", rotation: -4, zIndex: 3, offsetX: -80, offsetY: 35, fontSize: "4.0rem", bannerScaleX: 1.02, bannerScaleY: 3.25, tag: "SIKLUS REPLIKASI", summary: "Bagaimana virus menggunakan sel inang untuk menghasilkan atau mewariskan genomnya", cards: [{title:"Daur litik",desc:"Adsorpsi → penetrasi → sintesis dan replikasi → perakitan → lisis."},{title:"Daur lisogenik",desc:"Genom virus bergabung dengan DNA inang membentuk profag dan dapat diwariskan ketika sel membelah."},{title:"Perbedaan utama",desc:"Pada daur litik, sel inang akhirnya pecah; pada daur lisogenik, sel dapat terus membelah sebelum genom virus aktif."}] },
+  { name: "KLASIFIKASI", description: "Dasar pengelompokan dan pemanfaatan", rotation: 5, zIndex: 4, offsetX: -85, offsetY: 40, fontSize: "3.8rem", bannerScaleX: 1.04, bannerScaleY: 3.2, tag: "PENGELOMPOKAN", summary: "Ciri yang digunakan untuk membandingkan virus serta pemanfaatannya", cards: [{title:"Dasar klasifikasi",desc:"Jenis asam nukleat, ukuran, bentuk, kapsomer, simetri, selubung, inang, sifat imunologis, enzim, dan cara penularan."},{title:"Klasifikasi Baltimore",desc:"Mengelompokkan virus berdasarkan genom dan strategi replikasinya."},{title:"Manfaat",desc:"Pengembangan vaksin, rekayasa genetika, terapi gen, pengendalian hama dengan baculovirus, interferon, dan riset bioteknologi."}] },
+  { name: "DAMPAK", description: "Penyakit, jalur penularan, dan pencegahan", rotation: 12, zIndex: 5, offsetX: -90, offsetY: 45, fontSize: "4.0rem", bannerScaleX: 1.02, bannerScaleY: 3.2, tag: "RISIKO & PENCEGAHAN", summary: "Contoh dampak virus dan langkah pencegahan yang sesuai dengan jalur penularannya", cards: [{title:"Contoh penyakit",desc:"Manusia: influenza, campak, polio, hepatitis, dengue, rabies. Hewan: penyakit kuku dan mulut serta tetelo. Tumbuhan: mosaik tembakau dan tungro."},{title:"Jalur penularan",desc:"Percikan atau udara, kontak atau cairan tubuh, vektor, makanan atau air tercemar, dan hewan ke manusia."},{title:"Pencegahan",desc:"Vaksinasi sesuai rekomendasi kesehatan, cuci tangan, etika batuk, menghindari kontak dekat saat sakit, dan 3M Plus."},{title:"Penanganan",desc:"Antivirus tertentu dan perawatan pendukung digunakan sesuai kondisi; antibiotik tidak bekerja melawan virus. Ikuti arahan tenaga kesehatan."}] }
 ];
+
 
 
 const slinkData = [
-  { numeral: "I", title: "SEJARAH PENEMUAN VIRUS", subtitle: "Empat tonggak penting", url: "projects/virus-presentation/index.html" },
-  { numeral: "II", title: "CIRI, UKURAN & BENTUK", subtitle: "Pengertian dan karakteristik virus", url: "projects/virus-presentation/index.html" },
-  { numeral: "III", title: "STRUKTUR VIRUS", subtitle: "Asam nukleat, kapsid, kapsomer, selubung", url: "projects/virus-presentation/index.html" },
-  { numeral: "IV", title: "REPLIKASI VIRUS", subtitle: "Daur litik dan lisogenik", url: "projects/virus-presentation/index.html" },
-  { numeral: "V", title: "PENYAKIT & PENCEGAHAN", subtitle: "Penularan, pencegahan, dan penanganan", url: "projects/virus-presentation/index.html" }
+  { numeral: "I", title: "PENGENALAN", subtitle: "Sejarah penemuan dan definisi", url: "projects/virus-presentation/index.html" },
+  { numeral: "II", title: "STRUKTUR", subtitle: "Ukuran, bentuk, dan bagian penyusun", url: "projects/virus-presentation/index.html" },
+  { numeral: "III", title: "REPLIKASI", subtitle: "Tahap daur litik dan lisogenik", url: "projects/virus-presentation/index.html" },
+  { numeral: "IV", title: "KLASIFIKASI", subtitle: "Pengelompokan dan manfaat", url: "projects/virus-presentation/index.html" },
+  { numeral: "V", title: "DAMPAK", subtitle: "Penyakit, penularan, dan pencegahan", url: "projects/virus-presentation/index.html" }
 ];
+
 
 // Add or edit video entries here. Place video files in assets/videos/.
 const videoGalleryData = [
-  { numeral: "I", title: "DAUR LITIK", subtitle: "Tempel → masuk → buat → rakit → keluar", src: "", poster: "" },
-  { numeral: "II", title: "DAUR LISOGENIK", subtitle: "Genom virus dapat berintegrasi dengan DNA inang", src: "", poster: "" },
-  { numeral: "III", title: "PENCEGAHAN INFEKSI", subtitle: "Vaksinasi, kebersihan, etika batuk, dan 3M Plus", src: "", poster: "" }
+  { numeral: "I", title: "LIMA TAHAP DAUR LITIK", subtitle: "Adsorpsi → penetrasi → sintesis → perakitan → lisis", src: "", poster: "" },
+  { numeral: "II", title: "KUNCI DAUR LISOGENIK", subtitle: "Genom virus terintegrasi dan dapat diwariskan sebagai profag", src: "", poster: "" },
+  { numeral: "III", title: "PENCEGAHAN UTAMA", subtitle: "Vaksinasi, kebersihan, etika batuk, dan 3M Plus", src: "", poster: "" }
 ];
+
 
 const skillTabsList = [
-  { id: "struktur", code: "01", label: "STRUKTUR" },
-  { id: "replikasi", code: "02", label: "REPLIKASI" },
-  { id: "klasifikasi", code: "03", label: "KLASIFIKASI" },
-  { id: "pencegahan", code: "04", label: "PENCEGAHAN" }
+  { id: "konsep", code: "01", label: "KONSEP" },
+  { id: "dampak", code: "02", label: "DAMPAK" },
+  { id: "aksi", code: "03", label: "TINDAKAN" }
 ];
 
+
 const skillGroupsData = [
-  { id: "struktur", title: "STRUKTUR DAN CIRI VIRUS", code: "01", skills: [{name:"Asam nukleat: DNA atau RNA",level:100},{name:"Kapsid",level:100},{name:"Kapsomer",level:100},{name:"Selubung pada sebagian virus",level:100},{name:"Virus bersifat aseluler",level:100}] },
-  { id: "replikasi", title: "DAUR LITIK DAN LISOGENIK", code: "02", skills: [{name:"Adsorpsi",level:100},{name:"Penetrasi",level:100},{name:"Sintesis dan replikasi",level:100},{name:"Perakitan",level:100},{name:"Lisis",level:100}] },
-  { id: "klasifikasi", title: "DASAR KLASIFIKASI VIRUS", code: "03", skills: [{name:"Jenis asam nukleat",level:100},{name:"Ukuran dan bentuk",level:100},{name:"Jenis sel inang",level:100},{name:"Klasifikasi Baltimore",level:100}] },
-  { id: "pencegahan", title: "PENULARAN DAN PENCEGAHAN", code: "04", skills: [{name:"Vaksinasi",level:100},{name:"Cuci tangan",level:100},{name:"Etika batuk",level:100},{name:"3M Plus",level:100}] }
+  { id: "konsep", title: "KONSEP YANG HARUS DIPAHAMI", code: "01", skills: [{name:"Membedakan virus dari sel hidup",level:100},{name:"Menjelaskan peran sel inang",level:100},{name:"Menghubungkan genom dengan klasifikasi",level:100}] },
+  { id: "dampak", title: "MEMBACA DAMPAK VIRUS", code: "02", skills: [{name:"Membedakan contoh penyakit manusia, hewan, dan tumbuhan",level:100},{name:"Mencocokkan contoh virus dengan jalur penularan",level:100},{name:"Mengenali pemanfaatan virus dalam bioteknologi",level:100}] },
+  { id: "aksi", title: "TINDAKAN PENCEGAHAN", code: "03", skills: [{name:"Mengikuti rekomendasi vaksinasi",level:100},{name:"Menjaga kebersihan dan etika batuk",level:100},{name:"Melakukan 3M Plus",level:100},{name:"Mengikuti arahan tenaga kesehatan",level:100}] }
 ];
+
 
 // --------------------------------------------------------------------------
 // 2. Global State & DOM Element Cache
