@@ -11,253 +11,41 @@
 const colors = ["fill-button-1", "fill-button-2", "fill-button-3"];
 
 const options = [
-  {
-    name: "PROJECT",
-    description: "View Featured Works & Projects",
-    rotation: -20,
-    zIndex: 1,
-    offsetX: -40,
-    offsetY: 25,
-    fontSize: "5.15rem",
-    bannerScaleX: 1.07,
-    bannerScaleY: 3.35,
-    tag: "PORTFOLIO WORKS",
-    summary: "Featured applications, interactive web systems & creative experiments",
-    cards: [
-      {
-        title: "belum tau",
-        desc: "belum tau."
-      },
-      {
-        title: "belum tau.",
-        desc: "belum tau."
-      },
-      {
-        title: "belum tau",
-        desc: "belum tau"
-      },
-      {
-        title: "belum tau",
-        desc: "belum tau."
-      }
-    ]
-  },
-  {
-    name: "SKILLS",
-    description: "View Technical Abilities & Stack",
-    rotation: -12,
-    zIndex: 2,
-    offsetX: -65,
-    offsetY: 30,
-    fontSize: "4.55rem",
-    bannerScaleX: 0.96,
-    bannerScaleY: 3.05,
-    tag: "ABILITIES & PROFICIENCY",
-    summary: "Modern frontend technologies, system design, and AI workflows",
-    cards: [
-      {
-        title: "Modern Frontend Core",
-        desc: "TypeScript, JavaScript (ES6+), HTML5 Semantic Architecture, Native CSS3 (Flexbox/Grid/Animations)."
-      },
-      {
-        title: "Component Systems",
-        desc: "React, Next.js App Router, Vue.js, Tailwind CSS v4, Headless UI, Material Design 3 tokens."
-      },
-      {
-        title: "Performance & Audio",
-        desc: "Web Audio API latency mitigation, 60fps WAAPI & CSS Hardware Accelerated pipelines."
-      },
-      {
-        title: "AI Integration & Dev Tools",
-        desc: "Frontier LLM integrations, Prompt Engineering, Agentic coding workflows, Git automation."
-      }
-    ]
-  },
-  {
-    name: "ABOUT",
-    description: "Developer Profile & Philosophy",
-    rotation: -4,
-    zIndex: 3,
-    offsetX: -80,
-    offsetY: 35,
-    fontSize: "4.85rem",
-    bannerScaleX: 1.02,
-    bannerScaleY: 3.25,
-    tag: "PROFILE & JOURNEY",
-    summary: "Frontend web designer & developer dedicated to immersive web experiences",
-    cards: [
-      {
-        title: "Design Philosophy",
-        desc: "Belief in high-fidelity micro-interactions, bold visual identity, and accessible engineering."
-      },
-      {
-        title: "Inspiration",
-        desc: "Persona 3 Reload & Atlus design systems: dynamic angled layouts, typographic hierarchy, and responsive fluid motion."
-      },
-      {
-        title: "Developer Identity",
-        desc: "Ilham Ziqri: Frontend specialist crafting web interfaces that feel alive, intuitive, and memorable."
-      }
-    ]
-  },
-  {
-    name: "CONTACT",
-    description: "Initiate Communication",
-    rotation: 5,
-    zIndex: 4,
-    offsetX: -85,
-    offsetY: 40,
-    fontSize: "4.65rem",
-    bannerScaleX: 1.04,
-    bannerScaleY: 3.2,
-    tag: "COMMUNICATION CHANNELS",
-    summary: "Available for collaboration, freelance inquiries, and frontend opportunities",
-    cards: [
-      {
-        title: "Direct Mail",
-        desc: "aiosssml@gmail.com: Priority channel for direct communication and collaborations."
-      },
-      {
-        title: "GitHub Repository",
-        desc: "github.com/Aiosssss: Explore active source code, repos, and open-source experiments."
-      }
-    ]
-  }
-,
-  {
-    name: "VIDEO",
-    description: "Watch Videos & Creative Works",
-    rotation: 12,
-    zIndex: 5,
-    offsetX: -90,
-    offsetY: 45,
-    fontSize: "4.9rem",
-    bannerScaleX: 1.02,
-    bannerScaleY: 3.2,
-    tag: "VIDEO ARCHIVE",
-    summary: "Video projects, demos, and creative works",
-    cards: [
-      { title: "Video Gallery", desc: "Watch video projects and creative works." }
-    ]
-  }
+  { name: "SEJARAH VIRUS", description: "Tonggak penemuan virus", rotation: -20, zIndex: 1, offsetX: -40, offsetY: 25, fontSize: "4.1rem", bannerScaleX: 1.07, bannerScaleY: 3.35, tag: "SEJARAH PENEMUAN", summary: "1883 Adolf Meyer · 1892 Dmitri Ivanovsky · 1897 Martinus Beijerinck · 1935 Wendell M. Stanley", cards: [{title:"1883 — Adolf Meyer",desc:"Penyakit mosaik tembakau."},{title:"1892 — Dmitri Ivanovsky",desc:"Agen infeksi lolos saringan bakteri."},{title:"1897 — Martinus Beijerinck",desc:"Menyebutnya “filterable virus”."},{title:"1935 — Wendell M. Stanley",desc:"Mengkristalkan partikel penyebab penyakit."}] },
+  { name: "STRUKTUR VIRUS", description: "Ciri, ukuran, bentuk, dan bagian virus", rotation: -12, zIndex: 2, offsetX: -65, offsetY: 30, fontSize: "4.1rem", bannerScaleX: 0.96, bannerScaleY: 3.05, tag: "CIRI & STRUKTUR", summary: "Virus aseluler dengan DNA atau RNA, kapsid, dan pada sebagian virus selubung", cards: [{title:"Apa itu virus?",desc:"Agen aseluler; partikel lengkap disebut virion."},{title:"Ukuran dan bentuk",desc:"Sekitar 20–300 nm; batang, bulat, filamen, polihedral, dan bentuk huruf T."},{title:"Bagian utama",desc:"Asam nukleat, kapsid, kapsomer, serta selubung pada sebagian virus."},{title:"Viroid dan prion",desc:"Viroid berupa RNA sirkuler tanpa kapsid; prion adalah protein infeksius."}] },
+  { name: "REPLIKASI VIRUS", description: "Daur litik dan lisogenik", rotation: -4, zIndex: 3, offsetX: -80, offsetY: 35, fontSize: "4.0rem", bannerScaleX: 1.02, bannerScaleY: 3.25, tag: "DAUR REPLIKASI", summary: "Virus memerlukan sel inang untuk bereplikasi", cards: [{title:"Daur litik",desc:"Adsorpsi, penetrasi, sintesis dan replikasi, perakitan, lalu lisis."},{title:"Daur lisogenik",desc:"Genom virus bergabung dengan DNA inang membentuk profag dan dapat diwariskan."},{title:"Perbedaan utama",desc:"Daur litik memecahkan sel; pada daur lisogenik sel inang dapat tetap membelah."}] },
+  { name: "KLASIFIKASI & MANFAAT", description: "Dasar pengelompokan dan pemanfaatan virus", rotation: 5, zIndex: 4, offsetX: -85, offsetY: 40, fontSize: "3.6rem", bannerScaleX: 1.04, bannerScaleY: 3.2, tag: "KLASIFIKASI & MANFAAT", summary: "Klasifikasi berdasarkan genom, bentuk, inang, dan ciri lainnya", cards: [{title:"Dasar klasifikasi",desc:"Asam nukleat, ukuran, bentuk, kapsomer, simetri, selubung, inang, dan sifat lainnya."},{title:"Klasifikasi Baltimore",desc:"Berdasarkan genom dan replikasi."},{title:"Manfaat virus",desc:"Pengembangan vaksin, rekayasa genetika, terapi gen, pengendalian hama, interferon, dan riset bioteknologi."}] },
+  { name: "PENYAKIT & PENCEGAHAN", description: "Penyakit, penularan, pencegahan, dan penanganan", rotation: 12, zIndex: 5, offsetX: -90, offsetY: 45, fontSize: "3.7rem", bannerScaleX: 1.02, bannerScaleY: 3.2, tag: "DAMPAK & PENCEGAHAN", summary: "Contoh penyakit virus pada manusia, hewan, dan tumbuhan serta cara mengurangi risiko infeksi", cards: [{title:"Penyakit akibat virus",desc:"Influenza, campak, polio, hepatitis, dengue, rabies, penyakit kuku dan mulut, tetelo, mosaik tembakau, dan tungro."},{title:"Penularan",desc:"Percikan atau udara, kontak atau cairan tubuh, vektor, makanan atau air tercemar, dan hewan ke manusia."},{title:"Pencegahan",desc:"Vaksinasi, cuci tangan, etika batuk, 3M Plus, dan menjaga kesehatan hewan."},{title:"Pengobatan",desc:"Antivirus tertentu, interferon, perawatan pendukung; antibiotik tidak bekerja melawan virus."}] }
 ];
 
 
 const slinkData = [
-  {
-    numeral: "I",
-    title: "VIRUS BIOLOGY PRESENTATION",
-    subtitle: "Biology project · 23 slides · PowerPoint presentation",
-    url: "projects/virus-presentation/index.html"
-  },
-  {
-    numeral: "II",
-    title: "belum tau",
-    subtitle: "belum tau",
-    url: "../porto-persona/index.html"
-  },
-  {
-    numeral: "III",
-    title: "belum tau",
-    subtitle: "belum tau",
-    url: "../persona5-font/index.html"
-  },
-  {
-    numeral: "IV",
-    title: "belum tau",
-    subtitle: "belum tau",
-    url: "../aios-app/index.html"
-  },
-  {
-    numeral: "V",
-    title: "belum tau",
-    subtitle: "belum tau",
-    url: "../web-app/index.html"
-  }
+  { numeral: "I", title: "SEJARAH PENEMUAN VIRUS", subtitle: "Empat tonggak penting", url: "projects/virus-presentation/index.html" },
+  { numeral: "II", title: "CIRI, UKURAN & BENTUK", subtitle: "Pengertian dan karakteristik virus", url: "projects/virus-presentation/index.html" },
+  { numeral: "III", title: "STRUKTUR VIRUS", subtitle: "Asam nukleat, kapsid, kapsomer, selubung", url: "projects/virus-presentation/index.html" },
+  { numeral: "IV", title: "REPLIKASI VIRUS", subtitle: "Daur litik dan lisogenik", url: "projects/virus-presentation/index.html" },
+  { numeral: "V", title: "PENYAKIT & PENCEGAHAN", subtitle: "Penularan, pencegahan, dan penanganan", url: "projects/virus-presentation/index.html" }
 ];
 
 // Add or edit video entries here. Place video files in assets/videos/.
 const videoGalleryData = [
-  {
-    numeral: "I",
-    title: "VIDEO 01",
-    subtitle: "Tambahkan deskripsi video di sini",
-    src: "assets/videos/video-1.mp4",
-    poster: "assets/videos/video-1.jpg"
-  },
-  {
-    numeral: "II",
-    title: "VIDEO 02",
-    subtitle: "Tambahkan deskripsi video di sini",
-    src: "assets/videos/video-2.mp4",
-    poster: "assets/videos/video-2.jpg"
-  },
-  {
-    numeral: "III",
-    title: "VIDEO 03",
-    subtitle: "Tambahkan deskripsi video di sini",
-    src: "assets/videos/video-3.mp4",
-    poster: "assets/videos/video-3.jpg"
-  }
+  { numeral: "I", title: "DAUR LITIK", subtitle: "Tempel → masuk → buat → rakit → keluar", src: "", poster: "" },
+  { numeral: "II", title: "DAUR LISOGENIK", subtitle: "Genom virus dapat berintegrasi dengan DNA inang", src: "", poster: "" },
+  { numeral: "III", title: "PENCEGAHAN INFEKSI", subtitle: "Vaksinasi, kebersihan, etika batuk, dan 3M Plus", src: "", poster: "" }
 ];
 
 const skillTabsList = [
-  { id: "frontend", code: "01", label: "belum tau" },
-  { id: "backend", code: "02", label: "belum tau" },
-  { id: "ai", code: "03", label: "belum tau" },
-  { id: "languages", code: "04", label: "belum tau" }
+  { id: "struktur", code: "01", label: "STRUKTUR" },
+  { id: "replikasi", code: "02", label: "REPLIKASI" },
+  { id: "klasifikasi", code: "03", label: "KLASIFIKASI" },
+  { id: "pencegahan", code: "04", label: "PENCEGAHAN" }
 ];
 
 const skillGroupsData = [
-  {
-    id: "frontend",
-    title: "belum tau",
-    code: "01",
-    skills: [
-      { name: "belum tau", level: 92 },
-      { name: "belum tau", level: 88 },
-      { name: "belum tau", level: 95 },
-      { name: "belum tau", level: 84 },
-      { name: "belum taus", level: 80 },
-      { name: "belum tau", level: 86 }
-    ]
-  },
-  {
-    id: "backend",
-    title: "belum tau",
-    code: "02",
-    skills: [
-      { name: "belum tau", level: 85 },
-      { name: "belum tau", level: 82 },
-      { name: "belum tau", level: 80 },
-      { name: "belum tau", level: 76 },
-      { name: "belum tau", level: 90 },
-      { name: "belum tau", level: 78 }
-    ]
-  },
-  {
-    id: "ai",
-    title: "belum tau",
-    code: "03",
-    skills: [
-      { name: "belum tau", level: 90 },
-      { name: "belum tau", level: 82 },
-      { name: "belum tau", level: 85 },
-      { name: "belum tau", level: 80 },
-      { name: "belum tau", level: 84 }
-    ]
-  },
-  {
-    id: "languages",
-    title: "belum tau",
-    code: "04",
-    skills: [
-      { name: "belum tau", level: 100 },
-      { name: "belum tau", level: 86 },
-      { name: "belum tau", level: 90 },
-      { name: "belum tau", level: 82 }
-    ]
-  }
+  { id: "struktur", title: "STRUKTUR DAN CIRI VIRUS", code: "01", skills: [{name:"Asam nukleat: DNA atau RNA",level:100},{name:"Kapsid",level:100},{name:"Kapsomer",level:100},{name:"Selubung pada sebagian virus",level:100},{name:"Virus bersifat aseluler",level:100}] },
+  { id: "replikasi", title: "DAUR LITIK DAN LISOGENIK", code: "02", skills: [{name:"Adsorpsi",level:100},{name:"Penetrasi",level:100},{name:"Sintesis dan replikasi",level:100},{name:"Perakitan",level:100},{name:"Lisis",level:100}] },
+  { id: "klasifikasi", title: "DASAR KLASIFIKASI VIRUS", code: "03", skills: [{name:"Jenis asam nukleat",level:100},{name:"Ukuran dan bentuk",level:100},{name:"Jenis sel inang",level:100},{name:"Klasifikasi Baltimore",level:100}] },
+  { id: "pencegahan", title: "PENULARAN DAN PENCEGAHAN", code: "04", skills: [{name:"Vaksinasi",level:100},{name:"Cuci tangan",level:100},{name:"Etika batuk",level:100},{name:"3M Plus",level:100}] }
 ];
 
 // --------------------------------------------------------------------------
@@ -270,7 +58,7 @@ let isModalOpen = false;
 let isProjectPageOpen = false;
 let selectedSlinkIndex = 0;
 let isSkillPageOpen = false;
-let currentSkillTab = "frontend";
+let currentSkillTab = "struktur";
 let isAboutPageOpen = false;
 let isContactPageOpen = false;
 let isVideoPageOpen = false;
@@ -323,7 +111,7 @@ const contactBgVideo = document.getElementById("contact-bg-video");
 const contactBackBtn = document.getElementById("contact-back-btn");
 const contactMailRows = document.querySelectorAll(".p3r-mail-row");
 
-// DOM Elements: Video Gallery Screen
+// DOM Elements: Galeri Video Screen
 const videoPage = document.getElementById("video-page");
 const videoBgVideo = document.getElementById("video-bg-video");
 const videoHeaderDiv = document.getElementById("video-header-div");
@@ -1263,7 +1051,7 @@ function closeContactPage() {
 }
 
 // --------------------------------------------------------------------------
-// 10. Video Gallery
+// 10. Galeri Video
 function triggerVideoTitleAnimation() {
   if (videoHeaderDiv) {
     videoHeaderDiv.classList.remove("animating");
@@ -1672,7 +1460,7 @@ document.addEventListener("keydown", (e) => {
     return;
   }
 
-  // Active Screen: Video Gallery
+  // Active Screen: Galeri Video
   if (isVideoPageOpen) {
     if (e.key === "Escape" || e.key.toLowerCase() === "b" || e.key.toLowerCase() === "backspace") { e.preventDefault(); closeVideoPage(); }
     return;
