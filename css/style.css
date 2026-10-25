@@ -2405,15 +2405,3 @@ button, .option-hitbox, .slink-card, .p3r-skill-tab, .control-item {
   .about-card-meta { font-size: .65rem !important; }
   .about-project-card, .contact-project-card { clip-path: none; border-radius: 2px; }
 }
-
-
-/* Perbaikan kontras menu aktif: tidak lagi memakai bidang putih menyilaukan */
-.option-item .fill-fg {
-  fill: #061b3f !important;
-}
-.option-item.selected .option-text {
-  fill: #ffffff !important;
-}
-.option-item.selected .masked-red-group .option-text {
-  fill: #ffffff !important;
-}
